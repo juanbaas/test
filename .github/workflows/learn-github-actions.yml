@@ -2,7 +2,7 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Retrieve secret
+      - name: Retrieve secrets
         env:
           super_secret: ${{ secrets.SUPERSECRET }}
         run: |
