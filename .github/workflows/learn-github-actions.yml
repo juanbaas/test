@@ -1,8 +1,12 @@
+on: 
+  push:
+    branches:
+    - main
 jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Retrieve secrets
+      - name: Retrieve secret
         env:
           super_secret: ${{ secrets.SUPERSECRET }}
         run: |
