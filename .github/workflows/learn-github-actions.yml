@@ -6,6 +6,7 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
+      - name: something
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.SUPERSECRET }}
