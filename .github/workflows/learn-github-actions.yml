@@ -6,8 +6,8 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Retrieve secret
+      - shell: bash
         env:
-          super_secret: ${{ secrets.SUPERSECRET }}
+          SUPER_SECRET: ${{ secrets.SuperSecret }}
         run: |
-          example-command "$super_secret"
+          example-command "$SUPER_SECRET"
